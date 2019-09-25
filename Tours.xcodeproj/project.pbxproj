@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		58769ED4233BF8C000767CE4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 58769ED3233BF8C000767CE4 /* AppDelegate.m */; };
+		58769ED6233BF8C000767CE4 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 58769ED5233BF8C000767CE4 /* GameScene.sks */; };
+		58769ED8233BF8C000767CE4 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = 58769ED7233BF8C000767CE4 /* Actions.sks */; };
+		58769EDB233BF8C000767CE4 /* GameScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 58769EDA233BF8C000767CE4 /* GameScene.m */; };
+		58769EDE233BF8C000767CE4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 58769EDD233BF8C000767CE4 /* ViewController.m */; };
+		58769EE0233BF8C200767CE4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 58769EDF233BF8C200767CE4 /* Assets.xcassets */; };
+		58769EE3233BF8C200767CE4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 58769EE1233BF8C200767CE4 /* Main.storyboard */; };
+		58769EE6233BF8C200767CE4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 58769EE5233BF8C200767CE4 /* main.m */; };
+		58769EF1233BF8C200767CE4 /* ToursTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58769EF0233BF8C200767CE4 /* ToursTests.m */; };
+		58769EFC233BF8C200767CE4 /* ToursUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 58769EFB233BF8C200767CE4 /* ToursUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		58769EED233BF8C200767CE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58769EC7233BF8C000767CE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58769ECE233BF8C000767CE4;
+			remoteInfo = Tours;
+		};
+		58769EF8233BF8C200767CE4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58769EC7233BF8C000767CE4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58769ECE233BF8C000767CE4;
+			remoteInfo = Tours;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		58769ECF233BF8C000767CE4 /* Tours.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tours.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		58769ED2233BF8C000767CE4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		58769ED3233BF8C000767CE4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		58769ED5233BF8C000767CE4 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		58769ED7233BF8C000767CE4 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		58769ED9233BF8C000767CE4 /* GameScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		58769EDA233BF8C000767CE4 /* GameScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameScene.m; sourceTree = "<group>"; };
+		58769EDC233BF8C000767CE4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		58769EDD233BF8C000767CE4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		58769EDF233BF8C200767CE4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		58769EE2233BF8C200767CE4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		58769EE4233BF8C200767CE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58769EE5233BF8C200767CE4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		58769EE7233BF8C200767CE4 /* Tours.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Tours.entitlements; sourceTree = "<group>"; };
+		58769EEC233BF8C200767CE4 /* ToursTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToursTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		58769EF0233BF8C200767CE4 /* ToursTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToursTests.m; sourceTree = "<group>"; };
+		58769EF2233BF8C200767CE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		58769EF7233BF8C200767CE4 /* ToursUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToursUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		58769EFB233BF8C200767CE4 /* ToursUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToursUITests.m; sourceTree = "<group>"; };
+		58769EFD233BF8C200767CE4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		58769ECC233BF8C000767CE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58769EE9233BF8C200767CE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58769EF4233BF8C200767CE4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		58769EC6233BF8C000767CE4 = {
+			isa = PBXGroup;
+			children = (
+				58769ED1233BF8C000767CE4 /* Tours */,
+				58769EEF233BF8C200767CE4 /* ToursTests */,
+				58769EFA233BF8C200767CE4 /* ToursUITests */,
+				58769ED0233BF8C000767CE4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		58769ED0233BF8C000767CE4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				58769ECF233BF8C000767CE4 /* Tours.app */,
+				58769EEC233BF8C200767CE4 /* ToursTests.xctest */,
+				58769EF7233BF8C200767CE4 /* ToursUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		58769ED1233BF8C000767CE4 /* Tours */ = {
+			isa = PBXGroup;
+			children = (
+				58769ED2233BF8C000767CE4 /* AppDelegate.h */,
+				58769ED3233BF8C000767CE4 /* AppDelegate.m */,
+				58769ED5233BF8C000767CE4 /* GameScene.sks */,
+				58769ED7233BF8C000767CE4 /* Actions.sks */,
+				58769ED9233BF8C000767CE4 /* GameScene.h */,
+				58769EDA233BF8C000767CE4 /* GameScene.m */,
+				58769EDC233BF8C000767CE4 /* ViewController.h */,
+				58769EDD233BF8C000767CE4 /* ViewController.m */,
+				58769EDF233BF8C200767CE4 /* Assets.xcassets */,
+				58769EE1233BF8C200767CE4 /* Main.storyboard */,
+				58769EE4233BF8C200767CE4 /* Info.plist */,
+				58769EE5233BF8C200767CE4 /* main.m */,
+				58769EE7233BF8C200767CE4 /* Tours.entitlements */,
+			);
+			path = Tours;
+			sourceTree = "<group>";
+		};
+		58769EEF233BF8C200767CE4 /* ToursTests */ = {
+			isa = PBXGroup;
+			children = (
+				58769EF0233BF8C200767CE4 /* ToursTests.m */,
+				58769EF2233BF8C200767CE4 /* Info.plist */,
+			);
+			path = ToursTests;
+			sourceTree = "<group>";
+		};
+		58769EFA233BF8C200767CE4 /* ToursUITests */ = {
+			isa = PBXGroup;
+			children = (
+				58769EFB233BF8C200767CE4 /* ToursUITests.m */,
+				58769EFD233BF8C200767CE4 /* Info.plist */,
+			);
+			path = ToursUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		58769ECE233BF8C000767CE4 /* Tours */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58769F00233BF8C200767CE4 /* Build configuration list for PBXNativeTarget "Tours" */;
+			buildPhases = (
+				58769ECB233BF8C000767CE4 /* Sources */,
+				58769ECC233BF8C000767CE4 /* Frameworks */,
+				58769ECD233BF8C000767CE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tours;
+			productName = Tours;
+			productReference = 58769ECF233BF8C000767CE4 /* Tours.app */;
+			productType = "com.apple.product-type.application";
+		};
+		58769EEB233BF8C200767CE4 /* ToursTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58769F03233BF8C200767CE4 /* Build configuration list for PBXNativeTarget "ToursTests" */;
+			buildPhases = (
+				58769EE8233BF8C200767CE4 /* Sources */,
+				58769EE9233BF8C200767CE4 /* Frameworks */,
+				58769EEA233BF8C200767CE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58769EEE233BF8C200767CE4 /* PBXTargetDependency */,
+			);
+			name = ToursTests;
+			productName = ToursTests;
+			productReference = 58769EEC233BF8C200767CE4 /* ToursTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		58769EF6233BF8C200767CE4 /* ToursUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58769F06233BF8C200767CE4 /* Build configuration list for PBXNativeTarget "ToursUITests" */;
+			buildPhases = (
+				58769EF3233BF8C200767CE4 /* Sources */,
+				58769EF4233BF8C200767CE4 /* Frameworks */,
+				58769EF5233BF8C200767CE4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58769EF9233BF8C200767CE4 /* PBXTargetDependency */,
+			);
+			name = ToursUITests;
+			productName = ToursUITests;
+			productReference = 58769EF7233BF8C200767CE4 /* ToursUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		58769EC7233BF8C000767CE4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Maze;
+				TargetAttributes = {
+					58769ECE233BF8C000767CE4 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					58769EEB233BF8C200767CE4 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 58769ECE233BF8C000767CE4;
+					};
+					58769EF6233BF8C200767CE4 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 58769ECE233BF8C000767CE4;
+					};
+				};
+			};
+			buildConfigurationList = 58769ECA233BF8C000767CE4 /* Build configuration list for PBXProject "Tours" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 58769EC6233BF8C000767CE4;
+			productRefGroup = 58769ED0233BF8C000767CE4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				58769ECE233BF8C000767CE4 /* Tours */,
+				58769EEB233BF8C200767CE4 /* ToursTests */,
+				58769EF6233BF8C200767CE4 /* ToursUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		58769ECD233BF8C000767CE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58769ED6233BF8C000767CE4 /* GameScene.sks in Resources */,
+				58769EE0233BF8C200767CE4 /* Assets.xcassets in Resources */,
+				58769ED8233BF8C000767CE4 /* Actions.sks in Resources */,
+				58769EE3233BF8C200767CE4 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58769EEA233BF8C200767CE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58769EF5233BF8C200767CE4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		58769ECB233BF8C000767CE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58769EDE233BF8C000767CE4 /* ViewController.m in Sources */,
+				58769EDB233BF8C000767CE4 /* GameScene.m in Sources */,
+				58769EE6233BF8C200767CE4 /* main.m in Sources */,
+				58769ED4233BF8C000767CE4 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58769EE8233BF8C200767CE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58769EF1233BF8C200767CE4 /* ToursTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58769EF3233BF8C200767CE4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				58769EFC233BF8C200767CE4 /* ToursUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		58769EEE233BF8C200767CE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58769ECE233BF8C000767CE4 /* Tours */;
+			targetProxy = 58769EED233BF8C200767CE4 /* PBXContainerItemProxy */;
+		};
+		58769EF9233BF8C200767CE4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58769ECE233BF8C000767CE4 /* Tours */;
+			targetProxy = 58769EF8233BF8C200767CE4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		58769EE1233BF8C200767CE4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				58769EE2233BF8C200767CE4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		58769EFE233BF8C200767CE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		58769EFF233BF8C200767CE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		58769F01233BF8C200767CE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Tours/Tours.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Tours/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = maze.Tours;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		58769F02233BF8C200767CE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Tours/Tours.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = Tours/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = maze.Tours;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		58769F04233BF8C200767CE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ToursTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = maze.ToursTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tours.app/Contents/MacOS/Tours";
+			};
+			name = Debug;
+		};
+		58769F05233BF8C200767CE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ToursTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = maze.ToursTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tours.app/Contents/MacOS/Tours";
+			};
+			name = Release;
+		};
+		58769F07233BF8C200767CE4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ToursUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = maze.ToursUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Tours;
+			};
+			name = Debug;
+		};
+		58769F08233BF8C200767CE4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = ToursUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = maze.ToursUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Tours;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		58769ECA233BF8C000767CE4 /* Build configuration list for PBXProject "Tours" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58769EFE233BF8C200767CE4 /* Debug */,
+				58769EFF233BF8C200767CE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58769F00233BF8C200767CE4 /* Build configuration list for PBXNativeTarget "Tours" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58769F01233BF8C200767CE4 /* Debug */,
+				58769F02233BF8C200767CE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58769F03233BF8C200767CE4 /* Build configuration list for PBXNativeTarget "ToursTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58769F04233BF8C200767CE4 /* Debug */,
+				58769F05233BF8C200767CE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58769F06233BF8C200767CE4 /* Build configuration list for PBXNativeTarget "ToursUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58769F07233BF8C200767CE4 /* Debug */,
+				58769F08233BF8C200767CE4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 58769EC7233BF8C000767CE4 /* Project object */;
+}
