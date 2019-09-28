@@ -1,6 +1,6 @@
 //
 //  ViewController.h
-//  Tours
+//  Tours Of Something
 //
 //  Created by Emanuel Magxothwa on 2019/09/25.
 //  Copyright © 2019 Maze. All rights reserved.

@@ -1,6 +1,6 @@
 //
-//  ToursTests.m
-//  ToursTests
+//  ToursOfSomethingTests.m
+//  ToursOfSomethingTests
 //
 //  Created by Emanuel Magxothwa on 2019/09/25.
 //  Copyright © 2019 Maze. All rights reserved.
@@ -8,11 +8,11 @@
 
 #import <XCTest/XCTest.h>
 
-@interface ToursTests : XCTestCase
+@interface ToursOfSomethingTests : XCTestCase
 
 @end
 
-@implementation ToursTests
+@implementation ToursOfSomethingTests
 
 - (void)setUp {
     // Put setup code here. This method is called before the invocation of each test method in the class.
