@@ -18,6 +18,8 @@
     NSMutableArray<SKShapeNode*> *_disks;
     SKShapeNode *_disk;
     CGPoint old_pos;
+    NSInteger _numOfDisks;
+    NSInteger _yDefaultPos;
 }
 
 - (void)sceneDidLoad {
@@ -44,46 +46,104 @@
 //                                                [SKAction removeFromParent],
 //                                                ]]];
 
-    //Disks created
-    _disk = _diskOne = (SKShapeNode *)[self childNodeWithName:@"//diskOne"];
+    _numOfDisks = 3;
+    _yDefaultPos = 10*_numOfDisks - 5;
+    _disk = _diskOne = (SKShapeNode *)[self childNodeWithName:@"//disk"];
     _disks = [NSMutableArray new];
-    int i = 0;
-    int numOfDisks = 5;
-    do {
-        int yPos = 10*numOfDisks-10*i - 5;
-        if (i ==  0) {
-            _diskOne.position = CGPointMake(_disk.position.x, yPos);
-            [_disks insertObject:_diskOne atIndex:i];
-            i++;
-            continue;
-        }
-        SKShapeNode* d = [_diskOne copy];
-        d.name = @"disk";
-        d.xScale += 0.2*i;
-        d.yScale = 0.1;
-        d.position = CGPointMake(d.position.x, yPos);
-        d.userData[@"size"] = [NSNumber numberWithInt:1+i];
-        [_disks insertObject:d atIndex:i];
-        [self addChild:d];
-        i++;
-    } while (i < numOfDisks);
-
     
+    [self createDisks];
+    [self createPillars];
+
+    if (_disk != nil) {
+        old_pos = _disk.position;
+    }
+
+}
+
+- (void) createPillars {
     //Pillars
-    SKShapeNode* pillarOne = (SKShapeNode *)[self childNodeWithName:@"//pillarOne"];
+    NSInteger xVal = 150 + _numOfDisks * 10;
+    SKShapeNode* pillarOne = (SKShapeNode *)[self childNodeWithName:@"//pillar"];
+    pillarOne.position = CGPointMake(xVal, 50);
     _pillars = [NSMutableArray new];
+
     for (NSInteger i = 0; i < 3; i++) {
         SKShapeNode* p = [pillarOne copy];
         p.name = @"pillar";
-        p.position = CGPointMake(pillarOne.position.x+(150*i), 50);
+        p.position = CGPointMake(xVal*i, 50);
         p.xScale = self.size.width * 0.0001;
         
         [_pillars insertObject:p atIndex:i];
         [self addChild:p];
     }
+}
 
-    old_pos = _disk.position;
+- (void) updateDiskInfo: (NSInteger) indx {
+    SKShapeNode* d = [_diskOne copy];
+    d.name = @"diskN";
+    d.xScale += 0.2*indx;
+    d.yScale = 0.1;
+    d.position = CGPointMake(0, _yDefaultPos-10*indx);
+    d.userData[@"size"] = [NSNumber numberWithInteger:1+indx];
+    d.fillColor = [NSColor colorWithRed:0.05*indx green:0.1*indx blue:0.15*indx alpha:0.15*indx];
+    [_disks insertObject:d atIndex:indx];
+    [self addChild:d];
+}
+
+- (void) createDisks {
+    //Disks created
+    NSInteger i = 0;
+    do {
+        if (i ==  0) {
+            _diskOne.position = CGPointMake(0, _yDefaultPos-10*i);
+            [_disks insertObject:_diskOne atIndex:i];
+            i++;
+            continue;
+        }
+        [self updateDiskInfo:i];
+        
+        i++;
+    } while (i < _numOfDisks);
+}
+
+
+- (void) restartLevel {
+    NSInteger i = 0;
+    _yDefaultPos = 10*_numOfDisks - 5;
+
+    for (SKShapeNode* disk in _disks) {
+        disk.position = CGPointMake(0, _yDefaultPos-10*i);
+        i++;
+    }
     
+    while (i < _numOfDisks) {
+        [self updateDiskInfo:i];
+        i++;
+    }
+}
+
+- (void) nextLevel {
+    _numOfDisks = _numOfDisks < 11 ? _numOfDisks+1 : _numOfDisks;
+    [self restartLevel];
+}
+
+- (void) prevLevel {
+    if (_disks.count > 3) {
+        NSInteger i = 0;
+        
+        _numOfDisks = _numOfDisks > 1 ? _numOfDisks-1 : _numOfDisks;
+        _yDefaultPos = 10*_numOfDisks - 5;
+
+        for (SKShapeNode* disk in _disks) {
+            disk.position = CGPointMake(0, _yDefaultPos-10*i);
+            i++;
+        }
+        
+        SKShapeNode* disk = [_disks lastObject];
+        NSArray<SKShapeNode*> *nodes = @[disk];
+        [_disks removeLastObject];
+        [self removeChildrenInArray:nodes];
+    }
 }
 
 
@@ -103,6 +163,7 @@
 }
 
 - (NSInteger)overDisks: (CGPoint) pos {
+    // Calculate yAxis offset when dropping disk on pillar
     NSInteger multiple = 5;
     
     for (SKShapeNode* disk in _disks) {
@@ -116,7 +177,7 @@
     return multiple;
 }
 
-- (int) isLegalMove {
+- (short) isLegalMove {
     for (SKShapeNode* disk in _disks) {
         if (_disk != disk) {
             if ((disk.position.x-75) <= _disk.position.x && _disk.position.x <= (disk.position.x+75)) {
@@ -136,6 +197,16 @@
     if ((_disk.position.x-75) <= pos.x && pos.x <= (_disk.position.x+75)) {
         old_pos = _disk.position;
     }
+}
+
+- (short)isLevelCompleted {
+    SKShapeNode* lastPillar = [_pillars lastObject];
+    for (SKShapeNode* disk in _disks) {
+        if (disk.position.x != lastPillar.position.x) {
+            return 0;
+        }
+    }
+    return 1;
 }
 
 - (void)touchMovedToPoint:(CGPoint)pos {
@@ -165,6 +236,10 @@
             _disk.position = old_pos;
         }
     }
+    
+    if ([self isLevelCompleted]) {
+        [self nextLevel];
+    }
 }
 
 - (void)keyDown:(NSEvent *)theEvent {
@@ -173,6 +248,23 @@
             // Run 'Pulse' action from 'Actions.sks'
 //            [_label runAction:[SKAction actionNamed:@"Pulse"] withKey:@"fadeInOut"];
             break;
+        case 0x0F: /* R */
+            // Needs to restart level!
+            
+            [self restartLevel];
+            break;
+        case 0x7C: /* right-arrow */
+            // Next level
+            [self nextLevel];
+            break;
+        case 0x7B: /* left-arrow */
+            // Previous level
+            [self prevLevel];
+            break;
+        case 0x0C: /* Q */
+            exit(0);
+            break;
+            
         default:
             NSLog(@"keyDown:'%@' keyCode: 0x%02X", theEvent.characters, theEvent.keyCode);
             break;
@@ -188,7 +280,6 @@
 - (void)mouseUp:(NSEvent *)theEvent {
     [self touchUpAtPoint:[theEvent locationInNode:self]];
 }
-
 
 -(void)update:(CFTimeInterval)currentTime {
     // Called before each frame is rendered
